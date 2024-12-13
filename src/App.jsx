@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './componets/Navbar'
+import About from './componets/About'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,31 +12,9 @@ function App() {
   return (
     <>
         <Navbar/>
+        
     <main>
-        <section id="welcome-section">
-            <div className="hero-img">
-                <img src="./11zon_cropped.jpeg" alt=""/>
-            </div>
-            <div className="hero-text">
-                <p>Hi</p>
-                <p>I'm</p>
-                <p>Endale</p>
-            </div>
-        </section>
-        <section id="about">
-            <header className="section-title">About Me</header>
-            <div className="box">
-                <div className="about-img">
-
-                </div>
-                <div className="about-text">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos reiciendis aliquid ipsum deserunt tempore asperiores reprehenderit vitae nulla, hic optio dolor labore ea fugiat ad odit consectetur delectus. Dolore optio suscipit aperiam temporibus illum exercitationem ipsum voluptatibus eius ducimus quidem officia dicta consequuntur vero corrupti, quia facilis hic asperiores. Veniam.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptates praesentium officiis expedita veritatis quae,
-                    </p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, iure.</p>
-                </div>
-            </div>
-        </section>
+        <About/>
 
         <section id="skill">
             <header className="section-title">skill</header>
@@ -165,6 +145,8 @@ function App() {
             <li><a href=""><button className="nav-btn">Contact</button></a></li>
         </ul>
     </footer>
+
+  
     </>
   )
 }

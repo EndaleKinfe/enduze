@@ -1,26 +1,26 @@
+import {useState} from 'react';
+import Menu from "./Menu";
 const Navbar = () => {
+    const [expanded, setExpanded] = useState(false);
+    function handletoggle(){
+        let a = false;
+        if(expanded){
+            a = false;
+        }
+        else{
+            a = true;
+        }
+        setExpanded(a);
+    }
     return ( 
-        <nav className='navbar bg-dark'>
-        <div className='container-fluid'>
-        <a href='#' className="navbar-brand text-light">EndaleKinfe</a>
-        <button className='navbar-toggler bg-warning' type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu"
-            aria-controls='menu'
-            aria-expanded="false"
-            aria-label='Toggle navigation'
-        >t</button>
-        <div className='collapse navbar-collapse' id="menu">
-            <ul className='navbar-nav '>
-                <li className='nav-item '><a href="">Home</a></li>
-                <li className='nav-item '><a href="">About</a></li>
-                <li className='nav-item '><a href="">Skills</a></li>
-                <li className='nav-item '><a href="">projects</a></li>
-                <li className='nav-item '><a href="">Contact Me</a></li>
-                <li className='nav-item '><a href="">Blog</a></li>
-            </ul>
-        </div>
-        </div>
+        <nav className='sticky top-0 left-0 bg-white grid  grid-cols-2 justify-items-center items-center md:justify-around dark:bg-slate-600 md:flex space-x-5 *:my-2 *:py-1 lg:space-x-10 xl:space-x-20  h-full'>
+       
+        <a href='#' className="mx-2 text-white font-mono">EndaleKinfe</a>
+    
+        <div onClick={handletoggle} className="rounded-lg  md:hidden border-2 border-solid border-white max-w-12 w-10 text-center text-white"
+            aria-label='Toggle navigation'>t</div>
+        <Menu expanded={expanded}/>
+
     </nav>
      );
 }
